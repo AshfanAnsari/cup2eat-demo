@@ -1,138 +1,191 @@
 <!doctype html>
 <html lang="en">
-<head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Cup2Eat — Eat Your Drink</title>
-<meta name="description" content="Cup2Eat edible cups. Finish your drink, then eat the cup." />
-<link rel="icon" type="image/svg+xml" href="favicon.svg" />
-  <script type="module" crossorigin src="/cup2eat-demo/demo7/assets/index-B9YB905_.js"></script>
-  <link rel="stylesheet" crossorigin href="/cup2eat-demo/demo7/assets/index-CzZRc4Gf.css">
-</head>
-<body>
-
-<div id="pin-wrap">
-  <div id="stage">
-
-    <!-- ACT 0 · OPENING — THE CORN WALL -->
-    <section class="act" id="act-open">
-      <div class="glow glow-open"></div>
-      <h1 class="giant">EDIBLE</h1>
-      <img class="wheat w-back" src="assets/wheat.webp" alt="" />
-      <img class="wheat w-left" src="assets/wheat.webp" alt="" />
-      <img class="wheat w-centre" src="assets/wheat.webp" alt="" />
-      <img class="wheat w-right" src="assets/wheat.webp" alt="" />
-    </section>
-
-    <!-- ACT 1 · HERO -->
-    <section class="act" id="act-hero">
-      <div class="glow glow-hero"></div>
-      <span class="sc sc-1" style="left:5.2%;top:11.1%;width:6.25%" data-rot="24"><img src="assets/p-crumb1.png" alt="" /></span>
-      <span class="sc sc-2" style="left:38.5%;top:21.3%;width:7.3%" data-rot="-14"><img src="assets/p-chunk.png" alt="" /></span>
-      <span class="sc sc-3" style="left:80.2%;top:13.9%;width:5.2%"><img src="assets/p-bean1.png" alt="" /></span>
-      <div class="hero-copy">
-        <span class="mask"><span class="hline">YOUR CUP.</span></span>
-        <span class="mask"><span class="hline">YOUR TREAT.</span></span>
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Cup2Eat — 100% edible cups. Drink your chai or coffee, then eat the cup. Mix your own box of 396 cups in Chocolate, Vanilla and Elaichi." />
+    <title>Cup2Eat — Eat Your Drink</title>
+    <script type="module" crossorigin src="/cup2eat-demo/demo7/assets/index-C06VTrdm.js"></script>
+    <link rel="stylesheet" crossorigin href="/cup2eat-demo/demo7/assets/index-BCf3Mt8U.css">
+  </head>
+  <body>
+    <!-- ===== INTRO (Demo 1 loading page) ===== -->
+    <div id="intro" role="button" aria-label="Skip intro" title="Tap to skip">
+      <div class="intro-word" aria-hidden="true">
+        <span>c</span><span>u</span><span>p</span><span>2</span><span>e</span><span>a</span><span>t</span>
       </div>
-      <svg class="swoosh" viewBox="0 0 480 30" fill="none" aria-hidden="true">
-        <path d="M5 22 Q 240 -14 475 14" stroke="#C89B6A" stroke-width="5" stroke-linecap="round"/>
-      </svg>
-      <span class="sc sc-4" style="left:54.2%;top:79.6%;width:6.25%" data-rot="30"><img src="assets/p-bean2.png" alt="" /></span>
-      <span class="sc sc-5" style="left:14.6%;top:82.4%;width:3.65%"><img src="assets/p-crumb4.png" alt="" /></span>
-      <span class="sc sc-6" style="left:88.5%;top:72.2%;width:2.6%" data-rot="18"><img src="assets/p-crumb2.png" alt="" /></span>
-    </section>
-
-    <!-- ACT 2 · SHOWCASE -->
-    <section class="act" id="act-show">
-      <h2 class="show-title"><span class="mask"><span class="hline">MADE TO BE ENJOYED</span></span></h2>
-
-      <div class="fact" style="left:2.3%">01 — 100% EDIBLE CUP</div>
-      <div class="fact" style="left:35%">02 — CRUNCHY BISCUIT TEXTURE</div>
-      <div class="fact" style="left:67.7%">03 — A CUP THAT BECOMES YOUR TREAT</div>
-
-      <svg class="wires" viewBox="0 0 1920 1080" preserveAspectRatio="none" aria-hidden="true">
-        <path d="M515 406 L650 392" />
-        <path d="M1404 418 L1272 404" />
-        <path d="M533 828 L663 845" />
-        <path d="M1404 845 L1274 828" />
-      </svg>
-
-      <div class="cup-wrap">
-        <div class="cup-shadow"></div>
-        <img class="cup-main" src="assets/cup-hero.webp" alt="The Cup2Eat edible cup, filled with chai" />
-      </div>
-
-      <div class="ing ing-1" style="left:18.9%;top:30.5%"><span class="ring"></span><img src="assets/ing-beans.png" alt="Roasted coffee beans" /></div>
-      <div class="ing ing-2" style="left:13.2%;top:50.3%"><span class="ring"></span><img src="assets/ing-choc.png" alt="Rich chocolate" /></div>
-      <div class="ing ing-3" style="left:19.8%;top:70.5%"><span class="ring"></span><img src="assets/ing-crumb.png" alt="Cocoa crumb" /></div>
-      <div class="ing ing-4" style="left:73.3%;top:30.5%"><span class="ring"></span><img src="assets/ing-cocoa.png" alt="Fresh cocoa" /></div>
-      <div class="ing ing-5" style="left:79.2%;top:50.3%"><span class="ring"></span><img src="assets/ing-milk.png" alt="Milk cocoa" /></div>
-      <div class="ing ing-6" style="left:73.3%;top:70.5%"><span class="ring"></span><img src="assets/ing-vanilla.png" alt="Vanilla" /></div>
-
-      <div class="ing-label lab-1" style="left:14.7%;top:45.5%">ROASTED COFFEE</div>
-      <div class="ing-label lab-2" style="left:9.1%;top:65.3%">RICH CHOCOLATE</div>
-      <div class="ing-label lab-3" style="left:15.7%;top:85.5%">COCOA</div>
-      <div class="ing-label lab-4" style="left:69.2%;top:45.5%">FRESH COCOA</div>
-      <div class="ing-label lab-5" style="left:75.1%;top:65.3%">MILK COCOA</div>
-      <div class="ing-label lab-6" style="left:69.2%;top:85.5%">VANILLA</div>
-    </section>
-
-    <!-- ACT 3 · END CARD -->
-    <section class="act" id="act-end">
-      <div class="glow glow-end"></div>
-      <div class="end-copy">
-        <span class="mask"><span class="hline">NOT JUST A CUP.</span></span>
-        <span class="mask"><span class="hline">IT'S PART OF THE EXPERIENCE.</span></span>
-      </div>
-      <div class="btn-row">
-        <a class="btn-discover" href="https://wa.me/919818192575?text=Hi%20Cup2Eat!%20I%20have%20a%20question%20about%20the%20edible%20cups." target="_blank" rel="noopener">DISCOVER THE CUP</a>
-      </div>
-      <img class="end-cup" src="assets/cup-hero.webp" alt="The Cup2Eat edible cup" />
-      <button class="chev chev-l" type="button" aria-label="Previous page">&#8249;</button>
-      <button class="chev chev-r" type="button" aria-label="Next page">&#8250;</button>
-      <span class="sc se-1" style="left:20.8%;top:74.1%;width:4.2%"><img src="assets/p-bean3.png" alt="" /></span>
-      <span class="sc se-2" style="left:72.9%;top:20.4%;width:2.1%"><img src="assets/p-crumb5.png" alt="" /></span>
-      <span class="sc se-3" style="left:79.2%;top:70.4%;width:2.9%"><img src="assets/p-crumb6.png" alt="" /></span>
-      <span class="sc se-4" style="left:10.4%;top:27.8%;width:1.9%"><img src="assets/p-crumb3.png" alt="" /></span>
-    </section>
-
-    <!-- SHARED CHROME -->
-    <nav id="nav">
-      <button id="menu-btn" type="button" aria-label="Open menu">
-        <span></span><span></span><span></span>
-      </button>
-      <div class="wordmark">CUP2EAT</div>
-      <div class="nav-links">
-        <button type="button" data-goto="0">Home</button>
-        <button type="button" data-goto="0.67">Products <span class="car">&#8250;</span></button>
-        <button type="button" class="login" title="Accounts arrive with the full store">Log In</button>
-      </div>
-      <div class="bag" aria-hidden="true">
-        <svg viewBox="0 0 30 38" fill="none">
-          <rect x="3" y="10" width="24" height="25" rx="2.5" stroke="#453124" stroke-width="2.4"/>
-          <path d="M9.5 17 v-3.5 a5.5 5.5 0 0 1 11 0 V17" stroke="#453124" stroke-width="2.4"/>
-        </svg>
-        <span class="badge">0</span>
-      </div>
-    </nav>
-
-    <a id="chat" href="https://wa.me/919818192575?text=Hi%20Cup2Eat!%20I%20have%20a%20question%20about%20the%20edible%20cups." target="_blank" rel="noopener" aria-label="Chat with Cup2Eat on WhatsApp">
-      <svg viewBox="0 0 44 36" fill="none" aria-hidden="true">
-        <rect x="2" y="2" width="40" height="27" rx="8" fill="#FFFFFF"/>
-        <path d="M12 27 L12 35 L22 29 Z" fill="#FFFFFF"/>
-      </svg>
-    </a>
-
-    <div id="menu" aria-hidden="true">
-      <button id="menu-close" type="button" aria-label="Close menu">&times;</button>
-      <button type="button" data-goto="0">Opening</button>
-      <button type="button" data-goto="0.31">Your Cup</button>
-      <button type="button" data-goto="0.67">Made To Be Enjoyed</button>
-      <button type="button" data-goto="0.985">Not Just A Cup</button>
+      <p class="intro-tag">eat your drink</p>
     </div>
 
-  </div>
-</div>
+    <!-- ===== HEADER ===== -->
+    <header class="site-head">
+      <div class="socials">
+        <a class="soc" href="https://www.instagram.com/cup2eat/" target="_blank" rel="noreferrer" aria-label="Cup2Eat on Instagram">
+          <svg viewBox="0 0 24 24"><path d="M12 8.8A3.2 3.2 0 1 0 12 15.2 3.2 3.2 0 0 0 12 8.8zm0-2.1a5.3 5.3 0 1 1 0 10.6 5.3 5.3 0 0 1 0-10.6zm6.9-.3a1.2 1.2 0 1 1-2.4 0 1.2 1.2 0 0 1 2.4 0zM12 4.2c-2.5 0-2.8 0-3.8.1a5.2 5.2 0 0 0-1.7.3 3.6 3.6 0 0 0-2.1 2.1 5.2 5.2 0 0 0-.3 1.7c0 1 0 1.3 0 3.8s0 2.8.1 3.8c.1.6.2 1.2.3 1.7.2.9.8 1.6 1.6 2.1.5.2 1.1.3 1.7.3 1 .1 1.3.1 3.8.1s2.8 0 3.8-.1a5.2 5.2 0 0 0 1.7-.3 3.6 3.6 0 0 0 2.1-2.1c.2-.5.3-1.1.3-1.7.1-1 .1-1.3.1-3.8s0-2.8-.1-3.8a5.2 5.2 0 0 0-.3-1.7 3.6 3.6 0 0 0-2.1-2.1 5.2 5.2 0 0 0-1.7-.3c-1-.1-1.3-.1-3.8-.1z"/></svg>
+        </a>
+        <span class="soc" aria-label="Facebook">
+          <svg viewBox="0 0 24 24"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.3 0-1.1-.1-2-.1-2 0-3.4 1.2-3.4 3.5V11H8.5v3H11v7h2.5z"/></svg>
+        </span>
+        <span class="soc" aria-label="X">
+          <svg viewBox="0 0 24 24"><path d="M4 3.5 10.9 13 4.3 20.5h2.5l5-5.6 4 5.6H20l-7.2-9.9 6.3-7.1h-2.5l-4.5 5.1-3.7-5.1H4z"/></svg>
+        </span>
+      </div>
+      <nav class="pills" aria-label="Pages">
+        <button class="pill" data-go="mix">Flavours</button>
+        <button class="pill" data-soon>Why Edible</button>
+        <button class="pill" data-soon>Proof</button>
+      </nav>
+      <button class="order-pill" data-go="mix">Order</button>
+    </header>
 
-</body>
+    <main>
+      <!-- ===== PAGE 1 — HERO ===== -->
+      <section id="page-home" class="page active">
+        <div class="hero">
+          <svg class="swoosh" viewBox="0 0 1440 900" preserveAspectRatio="none" aria-hidden="true">
+            <path id="swoosh-path" d="M-60 720 C 320 400, 560 780, 880 500 S 1330 240, 1520 320" fill="none" stroke="#ffffff" stroke-width="120" stroke-linecap="round" opacity="0.5" />
+          </svg>
+
+          <h1 class="wordmark" aria-label="cup2eat">
+            <span>c</span><span>u</span><span>p</span><span>2</span><span>e</span><span>a</span><span>t</span>
+          </h1>
+
+          <div class="note" aria-hidden="true">
+            <p>Real wafer,<br />eat it after</p>
+            <svg viewBox="0 0 90 44"><path d="M4 4 C 30 34, 58 38, 80 30 M80 30 l-11 -1 M80 30 l-4 -10" fill="none" stroke="#2e4b2f" stroke-width="2.4" stroke-linecap="round" /></svg>
+          </div>
+
+          <div class="ring" aria-hidden="true"></div>
+          <img class="cup" src="assets/cup-hero.webp" alt="A Cup2Eat edible biscuit cup filled with chai" />
+
+          <div class="badge b1"><strong>100%</strong><small>Edible</small></div>
+          <div class="badge b2"><strong>Zero</strong><small>Waste</small></div>
+          <div class="badge b3"><strong>3</strong><small>Flavours</small></div>
+
+          <div class="head-copy">
+            <div class="hline white">DRINK</div>
+            <div class="hline">THEN EAT</div>
+            <div class="hline">THE CUP</div>
+            <p class="para">Cup2Eat cups are 100% edible. Finish your chai or coffee, then eat the cup. Nothing goes in the bin.</p>
+          </div>
+
+          <button class="order-now" data-go="mix">Order now <span aria-hidden="true">→</span></button>
+
+          <div class="marquee" aria-hidden="true">
+            <div class="mq-track">
+              <div class="mq-group">
+                <span>EAT YOUR DRINK</span><i>✦</i><span>EAT YOUR DRINK</span><i>✦</i><span>EAT YOUR DRINK</span><i>✦</i><span>EAT YOUR DRINK</span><i>✦</i>
+              </div>
+              <div class="mq-group">
+                <span>EAT YOUR DRINK</span><i>✦</i><span>EAT YOUR DRINK</span><i>✦</i><span>EAT YOUR DRINK</span><i>✦</i><span>EAT YOUR DRINK</span><i>✦</i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===== PAGE 2 — FLAVOUR MIXING ===== -->
+      <section id="page-mix" class="page">
+        <div class="mix-wrap">
+          <button class="back" data-go="home">← Back</button>
+          <h2 class="mix-title">MIX YOUR BOX</h2>
+          <p class="mix-sub">One box · <strong>396 cups</strong> · <strong>₹3,999</strong> · delivery included.<br />Split the box across the three flavours any way you like.</p>
+
+          <div class="fillbox">
+            <div class="fill-head">
+              <span id="fill-count">0 / 396 cups</span>
+              <span id="fill-left">396 to add</span>
+            </div>
+            <div class="fillbar" role="img" aria-label="Box fill progress">
+              <div class="seg seg-choc" id="seg-choc"></div>
+              <div class="seg seg-vanilla" id="seg-vanilla"></div>
+              <div class="seg seg-elaichi" id="seg-elaichi"></div>
+            </div>
+            <div class="fill-legend">
+              <span><i class="dot dot-choc"></i>Chocolate <b id="pct-choc">0%</b></span>
+              <span><i class="dot dot-vanilla"></i>Vanilla <b id="pct-vanilla">0%</b></span>
+              <span><i class="dot dot-elaichi"></i>Elaichi <b id="pct-elaichi">0%</b></span>
+            </div>
+          </div>
+
+          <div class="cards">
+            <article class="fcard" data-flavour="choc">
+              <img src="assets/flavour-choc.webp" alt="Chocolate edible cup with coffee" />
+              <h3>CHOCOLATE</h3>
+              <div class="stepper">
+                <button class="step dec" aria-label="Remove chocolate cups">−</button>
+                <span class="count" id="count-choc">0</span>
+                <button class="step inc" aria-label="Add chocolate cups">+</button>
+              </div>
+              <div class="quick">
+                <button data-add="12">+12</button>
+                <button data-add="50">+50</button>
+                <button data-add="132">+132</button>
+              </div>
+            </article>
+
+            <article class="fcard" data-flavour="vanilla">
+              <img src="assets/flavour-vanilla.webp" alt="Vanilla edible cup with ice-cream" />
+              <h3>VANILLA</h3>
+              <div class="stepper">
+                <button class="step dec" aria-label="Remove vanilla cups">−</button>
+                <span class="count" id="count-vanilla">0</span>
+                <button class="step inc" aria-label="Add vanilla cups">+</button>
+              </div>
+              <div class="quick">
+                <button data-add="12">+12</button>
+                <button data-add="50">+50</button>
+                <button data-add="132">+132</button>
+              </div>
+            </article>
+
+            <article class="fcard" data-flavour="elaichi">
+              <img src="assets/flavour-elaichi.webp" alt="Elaichi edible cup with chai and cardamom pods" />
+              <h3>ELAICHI</h3>
+              <div class="stepper">
+                <button class="step dec" aria-label="Remove elaichi cups">−</button>
+                <span class="count" id="count-elaichi">0</span>
+                <button class="step inc" aria-label="Add elaichi cups">+</button>
+              </div>
+              <div class="quick">
+                <button data-add="12">+12</button>
+                <button data-add="50">+50</button>
+                <button data-add="132">+132</button>
+              </div>
+            </article>
+          </div>
+
+          <div class="mix-actions">
+            <button id="split" class="ghost-btn">Split equally</button>
+            <button id="reset" class="ghost-btn">Reset</button>
+            <button id="addbox" class="add-btn" disabled>Add 396 more cups</button>
+          </div>
+
+          <p class="mix-foot">Cup2Eat — Eat Your Drink · FSSAI Licensed · Ghaziabad</p>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===== CART BAR + DRAWER ===== -->
+    <div id="cartbar" hidden>
+      <span id="cartbar-text">0 boxes · ₹0</span>
+      <button id="cartbar-view">View cart</button>
+    </div>
+
+    <div id="scrim" hidden></div>
+    <aside id="drawer" aria-label="Your cart">
+      <div class="drawer-head">
+        <h3>Your cart</h3>
+        <button id="drawer-close" aria-label="Close cart">×</button>
+      </div>
+      <div id="cart-lines"></div>
+      <div class="cart-total"><span>Total</span><strong id="cart-total">₹0</strong></div>
+      <a id="wa-checkout" href="#" target="_blank" rel="noreferrer">Order on WhatsApp</a>
+      <p class="drawer-note">You will confirm the order with Cup2Eat on WhatsApp.</p>
+    </aside>
+
+    <div id="toast" role="status"></div>
+
+  </body>
 </html>
