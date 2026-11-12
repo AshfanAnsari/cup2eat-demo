@@ -9,8 +9,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Cup2Eat — 100% edible cups. Drink your chai or coffee, then eat the cup. Mix your own box of 396 cups in Chocolate, Vanilla and Elaichi." />
     <title>Cup2Eat — Eat Your Drink</title>
-    <script type="module" crossorigin src="/cup2eat-demo/demo7/assets/index-Cwj4jTRh.js"></script>
-    <link rel="stylesheet" crossorigin href="/cup2eat-demo/demo7/assets/index-8qGQ7_1a.css">
+    <script type="module" crossorigin src="/cup2eat-demo/demo7/assets/index-D1_l8ksz.js"></script>
+    <link rel="stylesheet" crossorigin href="/cup2eat-demo/demo7/assets/index-C3z9nE6j.css">
   </head>
   <body>
     <!-- ===== INTRO (Demo 1 loading page) ===== -->
@@ -93,12 +93,79 @@
         </div>
       </section>
 
-      <!-- ===== PAGE 2 — FLAVOUR MIXING ===== -->
+      <!-- ===== PAGE 2 — FLAVOUR MIXING (three stone slabs) ===== -->
       <section id="page-mix" class="page">
         <div class="mix-wrap">
           <button class="back" data-go="home">← Back</button>
           <h2 class="mix-title">MIX YOUR BOX</h2>
-          <p class="mix-sub">One box · <strong>396 cups</strong> · <strong>₹3,999</strong> · delivery included.<br />Split the box across the three flavours any way you like.</p>
+          <p class="mix-sub">One box · <strong>396 cups</strong> · <strong>₹3,999</strong> · delivery included.<br />Split the box across the three flavours any way you like — every cup stands on its own stone slab.</p>
+
+          <div class="cards slabs">
+            <article class="fcard slab" data-flavour="choc">
+              <div class="slab-img">
+                <picture>
+                  <source media="(max-width: 760px)" srcset="assets/slab-choc-m.webp" />
+                  <img src="assets/slab-choc.webp" loading="lazy" decoding="async" alt="Chocolate edible cup standing on its stone slab" />
+                </picture>
+              </div>
+              <h3>CHOCOLATE</h3>
+              <div class="stepper">
+                <button class="step dec" aria-label="Remove chocolate cups">−</button>
+                <span class="count" id="count-choc">0</span>
+                <button class="step inc" aria-label="Add chocolate cups">+</button>
+              </div>
+              <div class="quick">
+                <button data-add="12">+12</button>
+                <button data-add="50">+50</button>
+                <button data-add="132">+132</button>
+              </div>
+            </article>
+
+            <article class="fcard slab" data-flavour="vanilla">
+              <div class="slab-img" id="slab-mid">
+                <picture class="plate-empty">
+                  <source media="(max-width: 760px)" srcset="assets/slab-vanilla-empty-m.webp" />
+                  <img src="assets/slab-vanilla-empty.webp" loading="lazy" decoding="async" alt="The middle stone slab, empty — the cup from page one lands here" />
+                </picture>
+                <picture class="plate-full" hidden>
+                  <source media="(max-width: 760px)" srcset="assets/slab-vanilla-m.webp" />
+                  <img src="assets/slab-vanilla.webp" loading="lazy" decoding="async" alt="Vanilla edible cup standing on its stone slab" />
+                </picture>
+                <p class="land-note" aria-hidden="true">page 1’s cup lands here ↓</p>
+              </div>
+              <h3>VANILLA</h3>
+              <div class="stepper">
+                <button class="step dec" aria-label="Remove vanilla cups">−</button>
+                <span class="count" id="count-vanilla">0</span>
+                <button class="step inc" aria-label="Add vanilla cups">+</button>
+              </div>
+              <div class="quick">
+                <button data-add="12">+12</button>
+                <button data-add="50">+50</button>
+                <button data-add="132">+132</button>
+              </div>
+            </article>
+
+            <article class="fcard slab" data-flavour="elaichi">
+              <div class="slab-img">
+                <picture>
+                  <source media="(max-width: 760px)" srcset="assets/slab-elaichi-m.webp" />
+                  <img src="assets/slab-elaichi.webp" loading="lazy" decoding="async" alt="Elaichi edible cup standing on its stone slab" />
+                </picture>
+              </div>
+              <h3>ELAICHI</h3>
+              <div class="stepper">
+                <button class="step dec" aria-label="Remove elaichi cups">−</button>
+                <span class="count" id="count-elaichi">0</span>
+                <button class="step inc" aria-label="Add elaichi cups">+</button>
+              </div>
+              <div class="quick">
+                <button data-add="12">+12</button>
+                <button data-add="50">+50</button>
+                <button data-add="132">+132</button>
+              </div>
+            </article>
+          </div>
 
           <div class="fillbox">
             <div class="fill-head">
@@ -117,53 +184,6 @@
             </div>
           </div>
 
-          <div class="cards">
-            <article class="fcard" data-flavour="choc">
-              <img src="assets/flavour-choc.webp" loading="lazy" decoding="async" alt="Chocolate edible cup with coffee" />
-              <h3>CHOCOLATE</h3>
-              <div class="stepper">
-                <button class="step dec" aria-label="Remove chocolate cups">−</button>
-                <span class="count" id="count-choc">0</span>
-                <button class="step inc" aria-label="Add chocolate cups">+</button>
-              </div>
-              <div class="quick">
-                <button data-add="12">+12</button>
-                <button data-add="50">+50</button>
-                <button data-add="132">+132</button>
-              </div>
-            </article>
-
-            <article class="fcard" data-flavour="vanilla">
-              <img src="assets/flavour-vanilla.webp" loading="lazy" decoding="async" alt="Vanilla edible cup with ice-cream" />
-              <h3>VANILLA</h3>
-              <div class="stepper">
-                <button class="step dec" aria-label="Remove vanilla cups">−</button>
-                <span class="count" id="count-vanilla">0</span>
-                <button class="step inc" aria-label="Add vanilla cups">+</button>
-              </div>
-              <div class="quick">
-                <button data-add="12">+12</button>
-                <button data-add="50">+50</button>
-                <button data-add="132">+132</button>
-              </div>
-            </article>
-
-            <article class="fcard" data-flavour="elaichi">
-              <img src="assets/flavour-elaichi.webp" loading="lazy" decoding="async" alt="Elaichi edible cup with chai and cardamom pods" />
-              <h3>ELAICHI</h3>
-              <div class="stepper">
-                <button class="step dec" aria-label="Remove elaichi cups">−</button>
-                <span class="count" id="count-elaichi">0</span>
-                <button class="step inc" aria-label="Add elaichi cups">+</button>
-              </div>
-              <div class="quick">
-                <button data-add="12">+12</button>
-                <button data-add="50">+50</button>
-                <button data-add="132">+132</button>
-              </div>
-            </article>
-          </div>
-
           <div class="mix-actions">
             <button id="split" class="ghost-btn">Split equally</button>
             <button id="reset" class="ghost-btn">Reset</button>
@@ -172,6 +192,7 @@
 
         </div>
       </section>
+
     </main>
 
     <!-- ===== CART BAR + DRAWER ===== -->
