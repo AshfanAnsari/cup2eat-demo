@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Cup2Eat — 100% edible cups. Drink your chai or coffee, then eat the cup. Mix your own box of 396 cups in Chocolate, Vanilla and Elaichi." />
     <title>Cup2Eat — Eat Your Drink</title>
-    <script type="module" crossorigin src="/cup2eat-demo/demo7/assets/index-DjfTt19G.js"></script>
-    <link rel="stylesheet" crossorigin href="/cup2eat-demo/demo7/assets/index-D73JbUWF.css">
+    <script type="module" crossorigin src="/cup2eat-demo/demo7/assets/index-DNvrKDVC.js"></script>
+    <link rel="stylesheet" crossorigin href="/cup2eat-demo/demo7/assets/index-CShhZMrs.css">
   </head>
   <body>
     <!-- ===== INTRO (Demo 1 loading page) ===== -->
@@ -35,8 +35,12 @@
         <button class="pill" data-go="mix">Flavours</button>
         <button class="pill" data-soon>Why Edible</button>
         <button class="pill" data-soon>Proof</button>
+        <button class="pill" id="track-pill">Track order</button>
       </nav>
-      <button class="order-pill" data-go="mix">Order</button>
+      <div class="head-right">
+        <button class="pill acct" id="acct-btn">Login</button>
+        <button class="order-pill" data-go="mix">Order</button>
+      </div>
     </header>
 
     <main>
@@ -180,9 +184,140 @@
       </div>
       <div id="cart-lines"></div>
       <div class="cart-total"><span>Total</span><strong id="cart-total">₹0</strong></div>
+      <button id="checkout-btn">Checkout · dummy payment</button>
       <a id="wa-checkout" href="#" target="_blank" rel="noreferrer">Order on WhatsApp</a>
-      <p class="drawer-note">You will confirm the order with Cup2Eat on WhatsApp.</p>
+      <p class="drawer-note">Checkout is a dummy — no real payment. Or confirm the order with Cup2Eat on WhatsApp.</p>
     </aside>
+
+    <!-- ===== DUMMY BACKEND SCREENS ===== -->
+    <div class="screen" id="screen-login" hidden>
+      <div class="scrim-bg" data-close></div>
+      <div class="sheet-card">
+        <button class="sc-x" data-close aria-label="Close">×</button>
+        <p class="sc-eyebrow">Cup2Eat account</p>
+        <h3 class="sc-title">LOGIN / SIGN UP</h3>
+        <div id="login-step-1">
+          <div class="tabs">
+            <button class="tab active" data-tab="phone">Phone</button>
+            <button class="tab" data-tab="email">Email</button>
+          </div>
+          <label class="fld"><span id="contact-label">Mobile number</span>
+            <span class="input-row"><span class="prefix" id="contact-prefix">+91</span><input id="contact-input" inputmode="numeric" placeholder="98765 43210" autocomplete="tel" /></span>
+          </label>
+          <button class="big-btn" id="send-otp">Send OTP</button>
+          <p class="sc-note">Dummy login — no real message is sent. Any 4-digit code works on the next step.</p>
+        </div>
+        <div id="login-step-2" hidden>
+          <p class="sc-sub" id="otp-sent-to"></p>
+          <div class="otp-row">
+            <input class="otp-box" maxlength="1" inputmode="numeric" aria-label="OTP digit 1" />
+            <input class="otp-box" maxlength="1" inputmode="numeric" aria-label="OTP digit 2" />
+            <input class="otp-box" maxlength="1" inputmode="numeric" aria-label="OTP digit 3" />
+            <input class="otp-box" maxlength="1" inputmode="numeric" aria-label="OTP digit 4" />
+          </div>
+          <label class="fld"><span>Your name / café name</span>
+            <input id="name-input" placeholder="e.g. Sharma Café" autocomplete="name" />
+          </label>
+          <button class="big-btn" id="verify-otp">Verify &amp; continue</button>
+          <button class="link-btn" id="otp-back">← Change number</button>
+        </div>
+        <button class="link-btn admin-link" id="goto-admin">Admin login →</button>
+        <button class="link-btn" id="goto-track" style="margin-top:0.2rem">Track an order →</button>
+      </div>
+    </div>
+
+    <div class="screen" id="screen-checkout" hidden>
+      <div class="scrim-bg" data-close></div>
+      <div class="sheet-card">
+        <button class="sc-x" data-close aria-label="Close">×</button>
+        <div id="checkout-main">
+          <p class="sc-eyebrow">Almost there</p>
+          <h3 class="sc-title">CHECKOUT</h3>
+          <div id="checkout-lines" class="mini-lines"></div>
+          <div class="cart-total"><span>Total (delivery included)</span><strong id="checkout-total">₹0</strong></div>
+          <label class="fld"><span>Name / café name</span><input id="co-name" autocomplete="name" /></label>
+          <label class="fld"><span>Phone</span><input id="co-phone" inputmode="numeric" autocomplete="tel" /></label>
+          <label class="fld"><span>Delivery address</span><input id="co-address" placeholder="Shop / house, area, city" /></label>
+          <button class="big-btn" id="pay-btn">Pay · dummy</button>
+          <p class="sc-note">Dummy payment — the button pretends to charge you. Nothing real moves.</p>
+        </div>
+        <div id="checkout-success" hidden>
+          <div class="success-badge">✓</div>
+          <h3 class="sc-title">ORDER PLACED</h3>
+          <p class="sc-sub">Your order ID is</p>
+          <p class="order-id" id="success-order-id">C2E-1025</p>
+          <p class="sc-note">This is a dummy order on a dummy backend — nothing was charged and nothing will ship. Keep the ID to try tracking.</p>
+          <div class="btn-row">
+            <button class="big-btn" id="success-track">Track order</button>
+            <button class="ghost-btn" id="success-invoice">View invoice</button>
+          </div>
+          <button class="link-btn" data-close>Continue shopping</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="screen" id="screen-track" hidden>
+      <div class="scrim-bg" data-close></div>
+      <div class="sheet-card">
+        <button class="sc-x" data-close aria-label="Close">×</button>
+        <p class="sc-eyebrow">Where is my box?</p>
+        <h3 class="sc-title">TRACK ORDER</h3>
+        <label class="fld"><span>Order ID</span>
+          <span class="input-row"><input id="track-input" placeholder="C2E-1025" /><button class="small-btn" id="track-go">Track</button></span>
+        </label>
+        <div id="track-result"></div>
+      </div>
+    </div>
+
+    <div class="screen" id="screen-orders" hidden>
+      <div class="scrim-bg" data-close></div>
+      <div class="sheet-card wide">
+        <button class="sc-x" data-close aria-label="Close">×</button>
+        <p class="sc-eyebrow" id="orders-eyebrow">Your account</p>
+        <h3 class="sc-title">MY ORDERS</h3>
+        <div id="orders-list"></div>
+        <button class="link-btn" id="logout-btn">Log out</button>
+      </div>
+    </div>
+
+    <div class="screen" id="screen-invoice" hidden>
+      <div class="scrim-bg" data-close></div>
+      <div class="sheet-card wide">
+        <button class="sc-x" data-close aria-label="Close">×</button>
+        <div id="invoice-sheet"></div>
+        <div class="btn-row no-print">
+          <button class="big-btn" id="print-invoice">Print / save PDF</button>
+          <button class="ghost-btn" data-close>Close</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="screen" id="screen-admin" hidden>
+      <div class="scrim-bg" data-close></div>
+      <div class="sheet-card wide">
+        <button class="sc-x" data-close aria-label="Close">×</button>
+        <div id="admin-login">
+          <p class="sc-eyebrow">Cup2Eat staff</p>
+          <h3 class="sc-title">ADMIN</h3>
+          <label class="fld"><span>Password</span><input id="admin-pass" type="password" placeholder="••••••••" /></label>
+          <button class="big-btn" id="admin-go">Open dashboard</button>
+          <p class="sc-note">Dummy admin — the password is <strong>cup2eat</strong>. It is printed here on purpose: this is a demo, not a real lock.</p>
+        </div>
+        <div id="admin-dash" hidden>
+          <p class="sc-eyebrow">Admin dashboard · dummy data</p>
+          <h3 class="sc-title">DASHBOARD</h3>
+          <div class="stat-row" id="admin-stats"></div>
+          <h4 class="sc-h4">Orders</h4>
+          <div id="admin-orders"></div>
+          <h4 class="sc-h4">Stock (cups left)</h4>
+          <div id="admin-stock"></div>
+          <div class="btn-row">
+            <button class="ghost-btn" id="admin-logout">Lock dashboard</button>
+            <button class="ghost-btn danger" id="admin-reset">Reset demo data</button>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <div id="toast" role="status"></div>
 
