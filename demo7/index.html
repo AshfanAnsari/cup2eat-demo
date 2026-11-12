@@ -3,11 +3,14 @@
   <head>
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="preload" href="fonts/baloo-700.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="fonts/anton.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="assets/cup-hero.webp" as="image" type="image/webp" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Cup2Eat — 100% edible cups. Drink your chai or coffee, then eat the cup. Mix your own box of 396 cups in Chocolate, Vanilla and Elaichi." />
     <title>Cup2Eat — Eat Your Drink</title>
-    <script type="module" crossorigin src="/cup2eat-demo/demo7/assets/index-DNvrKDVC.js"></script>
-    <link rel="stylesheet" crossorigin href="/cup2eat-demo/demo7/assets/index-CShhZMrs.css">
+    <script type="module" crossorigin src="/cup2eat-demo/demo7/assets/index-BzOLZttl.js"></script>
+    <link rel="stylesheet" crossorigin href="/cup2eat-demo/demo7/assets/index-8qGQ7_1a.css">
   </head>
   <body>
     <!-- ===== INTRO (Demo 1 loading page) ===== -->
@@ -39,7 +42,7 @@
       </nav>
       <div class="head-right">
         <button class="pill acct" id="acct-btn">Login</button>
-        <button class="order-pill" data-go="mix">Order</button>
+        <button class="order-pill" id="cart-btn">Cart <span class="cart-count" id="cart-count" hidden>0</span></button>
       </div>
     </header>
 
@@ -61,7 +64,8 @@
           </div>
 
           <div class="ring" aria-hidden="true"></div>
-          <img class="cup" src="assets/cup-hero.webp" alt="A Cup2Eat edible biscuit cup filled with chai" />
+          <div class="steam" aria-hidden="true"><span></span><span></span><span></span></div>
+          <img class="cup" src="assets/cup-hero.webp" alt="A Cup2Eat edible biscuit cup filled with chai — tap it" fetchpriority="high" role="button" tabindex="0" aria-label="The edible cup. Tap it for a surprise." />
 
           <div class="badge b1"><strong>100%</strong><small>Edible</small></div>
           <div class="badge b2"><strong>Zero</strong><small>Waste</small></div>
@@ -115,7 +119,7 @@
 
           <div class="cards">
             <article class="fcard" data-flavour="choc">
-              <img src="assets/flavour-choc.webp" alt="Chocolate edible cup with coffee" />
+              <img src="assets/flavour-choc.webp" loading="lazy" decoding="async" alt="Chocolate edible cup with coffee" />
               <h3>CHOCOLATE</h3>
               <div class="stepper">
                 <button class="step dec" aria-label="Remove chocolate cups">−</button>
@@ -130,7 +134,7 @@
             </article>
 
             <article class="fcard" data-flavour="vanilla">
-              <img src="assets/flavour-vanilla.webp" alt="Vanilla edible cup with ice-cream" />
+              <img src="assets/flavour-vanilla.webp" loading="lazy" decoding="async" alt="Vanilla edible cup with ice-cream" />
               <h3>VANILLA</h3>
               <div class="stepper">
                 <button class="step dec" aria-label="Remove vanilla cups">−</button>
@@ -145,7 +149,7 @@
             </article>
 
             <article class="fcard" data-flavour="elaichi">
-              <img src="assets/flavour-elaichi.webp" alt="Elaichi edible cup with chai and cardamom pods" />
+              <img src="assets/flavour-elaichi.webp" loading="lazy" decoding="async" alt="Elaichi edible cup with chai and cardamom pods" />
               <h3>ELAICHI</h3>
               <div class="stepper">
                 <button class="step dec" aria-label="Remove elaichi cups">−</button>
