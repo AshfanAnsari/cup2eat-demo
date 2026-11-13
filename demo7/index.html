@@ -5,12 +5,12 @@
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <link rel="preload" href="fonts/baloo-700.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="fonts/anton.woff2" as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href="assets/cup-hero.webp" as="image" type="image/webp" />
+    <link rel="preload" href="assets/cup-cone.webp" as="image" type="image/webp" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="description" content="Cup2Eat — 100% edible cups. Drink your chai or coffee, then eat the cup. Mix your own box of 396 cups in Chocolate, Vanilla and Elaichi." />
     <title>Cup2Eat — Eat Your Drink</title>
-    <script type="module" crossorigin src="/cup2eat-demo/demo7/assets/index-Bpms2yTw.js"></script>
-    <link rel="stylesheet" crossorigin href="/cup2eat-demo/demo7/assets/index-C0ASlH7s.css">
+    <script type="module" crossorigin src="/cup2eat-demo/demo7/assets/index-Bqjk4p4m.js"></script>
+    <link rel="stylesheet" crossorigin href="/cup2eat-demo/demo7/assets/index-Dn8w-Wix.css">
   </head>
   <body>
     <!-- ===== INTRO (Demo 1 loading page) ===== -->
@@ -65,7 +65,7 @@
 
           <div class="ring" aria-hidden="true"></div>
           <div class="steam" aria-hidden="true"><span></span><span></span><span></span></div>
-          <img class="cup" src="assets/cup-hero.webp" alt="A Cup2Eat edible biscuit cup filled with chai — tap it" fetchpriority="high" role="button" tabindex="0" aria-label="The edible cup. Tap it for a surprise." />
+          <img class="cup" src="assets/cup-cone.webp" alt="A Cup2Eat edible cone cup — tap it" fetchpriority="high" role="button" tabindex="0" aria-label="The edible cup. Tap it for a surprise." />
 
           <div class="badge b1"><strong>100%</strong><small>Edible</small></div>
           <div class="badge b2"><strong>Zero</strong><small>Waste</small></div>
@@ -104,8 +104,9 @@
             <article class="fcard slab" data-flavour="choc">
               <div class="slab-img">
                 <picture>
-                  <source media="(max-width: 760px)" srcset="assets/slab-choc-m.webp" />
-                  <img src="assets/slab-choc.webp" loading="lazy" decoding="async" alt="Chocolate edible cup standing on its stone slab" />
+                  <source media="(min-width: 761px) and (max-height: 720px)" srcset="assets/pair-choc-m.webp" />
+                  <source media="(max-width: 760px)" srcset="assets/pair-choc-m.webp" />
+                  <img src="assets/pair-choc.webp" loading="lazy" decoding="async" alt="Chocolate edible cup standing on its stone slab" />
                 </picture>
               </div>
               <h3>CHOCOLATE</h3>
@@ -124,12 +125,14 @@
             <article class="fcard slab" data-flavour="vanilla">
               <div class="slab-img" id="slab-mid">
                 <picture class="plate-empty">
-                  <source media="(max-width: 760px)" srcset="assets/slab-vanilla-empty-m.webp" />
-                  <img src="assets/slab-vanilla-empty.webp" loading="lazy" decoding="async" alt="The middle stone slab, empty — the cup from page one lands here" />
+                  <source media="(min-width: 761px) and (max-height: 720px)" srcset="assets/slab-only-m.webp" />
+                  <source media="(max-width: 760px)" srcset="assets/slab-only-m.webp" />
+                  <img src="assets/slab-only.webp" loading="lazy" decoding="async" alt="The middle stone slab, empty — the cup from page one lands here" />
                 </picture>
                 <picture class="plate-full" hidden>
-                  <source media="(max-width: 760px)" srcset="assets/slab-vanilla-m.webp" />
-                  <img src="assets/slab-vanilla.webp" loading="lazy" decoding="async" alt="Vanilla edible cup standing on its stone slab" />
+                  <source media="(min-width: 761px) and (max-height: 720px)" srcset="assets/pair-vanilla-m.webp" />
+                  <source media="(max-width: 760px)" srcset="assets/pair-vanilla-m.webp" />
+                  <img src="assets/pair-vanilla.webp" loading="lazy" decoding="async" alt="Vanilla edible cup standing on its stone slab" />
                 </picture>
                 <p class="land-note" aria-hidden="true">page 1’s cup lands here ↓</p>
               </div>
@@ -149,8 +152,9 @@
             <article class="fcard slab" data-flavour="elaichi">
               <div class="slab-img">
                 <picture>
-                  <source media="(max-width: 760px)" srcset="assets/slab-elaichi-m.webp" />
-                  <img src="assets/slab-elaichi.webp" loading="lazy" decoding="async" alt="Elaichi edible cup standing on its stone slab" />
+                  <source media="(min-width: 761px) and (max-height: 720px)" srcset="assets/pair-elaichi-m.webp" />
+                  <source media="(max-width: 760px)" srcset="assets/pair-elaichi-m.webp" />
+                  <img src="assets/pair-elaichi.webp" loading="lazy" decoding="async" alt="Elaichi edible cup standing on its stone slab" />
                 </picture>
               </div>
               <h3>ELAICHI</h3>
